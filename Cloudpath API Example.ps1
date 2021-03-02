@@ -34,7 +34,7 @@ $DPSKPoolGUID = "AccountDpskPool-GUIDGOESHERE"
 $DPSKGUID = "AccountDpsk-GUIDGOESHERE"
 
 #Get just the single DPSK
-$path = "https://$CloudpathBaseDomain/admin/apiv2/KiW7Y8tlQm8u/dpskPools/$DPSKPoolGUID/dpsks/$DPSKGUID"
+$path = "https://$CloudpathBaseDomain/admin/apiv2/$APIKey/dpskPools/$DPSKPoolGUID/dpsks/$DPSKGUID"
 $getresult = Invoke-RestMethod -Method Get -Uri $path -ContentType 'application/json' -Headers $JWT
 
 #Based on the response build a payload which will change the expirationDateTime
